@@ -342,7 +342,7 @@ endif()
 install(TARGETS kahip DESTINATION lib)
 
 # Static interface library
-add_library(kahip_static interface/kaHIP_interface.cpp $<TARGET_OBJECTS:libkaffpa>
+add_library(kahip_static STATIC interface/kaHIP_interface.cpp $<TARGET_OBJECTS:libkaffpa>
                                                            $<TARGET_OBJECTS:libmapping>
                                                            $<TARGET_OBJECTS:libnodeordering>)
 target_include_directories(kahip_static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/interface)
